@@ -125,100 +125,103 @@ const Header = ({ activeHeading }) => {
       </div>
 
       {/*  2nd part of header start */}
-      <div
-        className={`${active == true ? "shadow-sm fixed top-0 left-0 z-10" : null
-          } transition hidden 800px:flex items-center justify-between w-full bg-cyan-500 h-[70px]`}
-      >
-        <div
-          className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
+    {/* 2nd part of header start */}
+<div
+  className={`${
+    active ? "shadow-sm fixed top-0 left-0 z-10" : null
+  } transition hidden 800px:flex items-center justify-between w-full bg-cyan-500 h-[70px]`}
+>
+  <div
+    className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
+  >
+    {/* Categories */}
+    <div onClick={() => setDropDown(!dropDown)}>
+      <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
+        <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
+        <button
+          className={`h-full w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-medium select-none rounded-t-md hover:bg-gray-200 transition-all`}
         >
-          {/* Catagories */}
-          <div onClick={() => setDropDown(!dropDown)}>
-            <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
-              <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
-              <button
-                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}
-              >
-                All Categories
-              </button>
-              <IoIosArrowDown
-                size={20}
-                className="absolute right-2 top-4 cursor-pointer"
-                onClick={() => setDropDown(!dropDown)}
-              />
-              {dropDown ? (
-                <DropDown
-                  categoriesData={categoriesData}
-                  setDropDown={setDropDown}
-                />
-              ) : null}
-            </div>
-          </div>
-
-          {/* NavItems */}
-          <div className={`${styles.noramlFlex}`}>
-            <Navbar active={activeHeading} />
-          </div>
-
-          <div className="flex">
-            <div className={`${styles.noramlFlex}`}>
-              <div
-                className="relative cursor-pointer mr-[15px]"
-                onClick={() => setOpenWishlist(true)}
-              >
-                <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
-                <span className="absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
-                  {wishlist && wishlist.length}
-                </span>
-              </div>
-            </div>
-
-            <div className={`${styles.noramlFlex}`}>
-              <div
-                className="relative cursor-pointer mr-[15px]"
-                onClick={() => setOpenCart(true)}
-              >
-                <AiOutlineShoppingCart
-                  size={30}
-                  color="rgb(255 255 255 / 83%)"
-                />
-                <span className="absolute right-0 top-0 rounded-full bg-black w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
-                  {cart && cart.length}
-                </span>
-              </div>
-            </div>
-
-            {/* avatar */}
-            <div className={`${styles.noramlFlex}`}>
-              <div className="relative cursor-pointer mr-[15px]">
-                {isAuthenticated ? (
-                  <Link to="/profile">
-                    <img
-                      src={`${backend_url}/${user.avatar}`}
-                      className="w-[35px] h-[35px] rounded-full"
-                      alt=""
-                    />
-                  </Link>
-                ) : (
-                  <Link to="/login">
-                    <CgProfile size={30} color="rgb(255 255 255 / 83%)" />
-                  </Link>
-                )}
-              </div>
-            </div>
-            {/* Avatar end */}
-            {/* card  popup start */}
-            {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
-            {/* card popup end */}
-
-            {/* Wish list pop uo Start */}
-            {openWishlist ? (
-              <Wishlist setOpenWishlist={setOpenWishlist} />
-            ) : null}
-            {/* Wish list pop uo end */}
-          </div>
-        </div>
+          All Categories
+        </button>
+        <IoIosArrowDown
+          size={20}
+          className="absolute right-2 top-4 cursor-pointer"
+          onClick={() => setDropDown(!dropDown)}
+        />
+        {dropDown ? (
+          <DropDown
+            categoriesData={categoriesData}
+            setDropDown={setDropDown}
+          />
+        ) : null}
       </div>
+    </div>
+
+    {/* Nav Items */}
+    <div className={`${styles.noramlFlex}`}>
+      <ul className="flex space-x-6">
+        {["Home", "Shop", "About", "Contact"].map((item, index) => (
+          <li
+            key={index}
+            className="relative text-white font-semibold text-lg cursor-pointer border-b-2 border-gray-300 hover:border-white hover:text-gray-300 transition-all after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-[2px] after:bg-gray-300 after:transition-all after:duration-300 hover:after:bg-white"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Icons Section */}
+    <div className="flex items-center space-x-4">
+      {/* Wishlist Icon */}
+      <div
+        className="relative cursor-pointer hover:scale-110 transition-transform"
+        onClick={() => setOpenWishlist(true)}
+      >
+        <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
+        <span className="absolute right-0 top-0 rounded-full bg-black w-4 h-4 text-white text-[12px] flex items-center justify-center">
+          {wishlist && wishlist.length}
+        </span>
+      </div>
+
+      {/* Cart Icon */}
+      <div
+        className="relative cursor-pointer hover:scale-110 transition-transform"
+        onClick={() => setOpenCart(true)}
+      >
+        <AiOutlineShoppingCart size={30} color="rgb(255 255 255 / 83%)" />
+        <span className="absolute right-0 top-0 rounded-full bg-black w-4 h-4 text-white text-[12px] flex items-center justify-center">
+          {cart && cart.length}
+        </span>
+      </div>
+
+      {/* Profile Avatar */}
+      <div className="relative cursor-pointer">
+        {isAuthenticated ? (
+          <Link to="/profile">
+            <img
+              src={`${backend_url}/${user.avatar}`}
+              className="w-9 h-9 rounded-full hover:opacity-90 transition-opacity"
+              alt="Profile Avatar"
+            />
+          </Link>
+        ) : (
+          <Link to="/login" className="hover:scale-110 transition-transform">
+            <CgProfile size={30} color="rgb(255 255 255 / 83%)" />
+          </Link>
+        )}
+      </div>
+
+      {/* Cart Popup */}
+      {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
+      
+      {/* Wishlist Popup */}
+      {openWishlist ? <Wishlist setOpenWishlist={setOpenWishlist} /> : null}
+    </div>
+  </div>
+</div>
+
+
 
       {/* Mobile Header */}
       <div
