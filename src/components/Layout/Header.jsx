@@ -59,12 +59,20 @@ const Header = ({ activeHeading }) => {
     <>
       <div className={`${styles.section}`}>
         <div className='hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between'>
-          <div className='flex items-center space-x-4 '>
-            <Link to='/' className='flex items-center space-x-0 '>
-              <img className='h-24 w-24' src={logo} alt='logo zig' />
-              <h3 className='text-lg font-semibold'>Zig & Stock</h3>
-            </Link>
-          </div>
+        <div className='flex items-center space-x-4'>
+  <Link 
+    to='/' 
+    className='flex items-center space-x-2 group hover:text-cyan-500 transition duration-300 ease-in-out'
+  >
+    <img className='h-45 w-40' src={logo} alt='logo zig' />
+    <h3 
+      className='text-lg font-semibold text-cyan-700 group-hover:text-cyan-500 transition duration-300 ease-in-out'
+    >
+      Zig & Stock
+    </h3>
+  </Link>
+</div>
+
 
           {/*Search box  */}
           <div className='w-[50%] relative'>
