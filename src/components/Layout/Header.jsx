@@ -163,13 +163,15 @@ const Header = ({ activeHeading }) => {
           {/* Nav Items */}
           <div className={`${styles.noramlFlex}`}>
             <ul className='flex space-x-6'>
-              {['Home', 'Shop', 'About', 'Contact'].map((item, index) => (
-                <li
+              {[{page:"home",path:'/'}, {page:'Shop',path:'/products'}, {page:'About',path:'/about'}, {page:'Contact',path:'/contact'}].map((item, index) => (
+               <Link to={`${item.path}`}>
+               <li
                   key={index}
                   className="relative text-white font-semibold text-lg cursor-pointer border-b-2 border-gray-300 hover:border-white hover:text-gray-300 transition-all after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-[2px] after:bg-gray-300 after:transition-all after:duration-300 hover:after:bg-white"
                 >
-                  {item}
+                  {item.page}
                 </li>
+                </Link>
               ))}
             </ul>
           </div>
