@@ -139,31 +139,41 @@ const Header = ({ activeHeading }) => {
         >
           {/* Categories */}
           <div onClick={() => setDropDown(!dropDown)}>
-            <div className='relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block'>
-              <BiMenuAltLeft size={30} className='absolute top-3 left-2' />
-              <button
-                className={`h-full w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-medium select-none rounded-t-md hover:bg-gray-200 transition-all`}
-              >
-                All Categories
-              </button>
-              <IoIosArrowDown
-                size={20}
-                className='absolute right-2 top-4 cursor-pointer'
-                onClick={() => setDropDown(!dropDown)}
-              />
-              {dropDown ? (
-                <DropDown
-                  categoriesData={categoriesData}
-                  setDropDown={setDropDown}
-                />
-              ) : null}
-            </div>
-          </div>
+  <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
+    <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
+    <button
+      className={`h-full w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-medium select-none rounded-t-md hover:bg-gray-200 transition-all`}
+    >
+      All Categories
+    </button>
+    <IoIosArrowDown
+      size={20}
+      className="absolute right-2 top-4 cursor-pointer"
+      onClick={() => setDropDown(!dropDown)}
+    />
+    {dropDown && (
+      <div className="absolute top-full left-0 w-full bg-white border border-gray-300 rounded-b-md shadow-md z-20 max-h-[300px] overflow-y-auto">
+        {/* Static list for testing visibility */}
+        <ul>
+          {categoriesData.map((category, index) => (
+          <li
+          key={index}
+          className="px-4 py-2 hover:bg-gray-200 cursor-pointer flex items-center space-x-2"
+        >
+          <img width={24} src={category.image_Url} alt={category.title} />
+          <span>{category.title}</span>
+        </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</div>
 
           {/* Nav Items */}
           <div className={`${styles.noramlFlex}`}>
             <ul className='flex space-x-6'>
-              {[{page:"home",path:'/'}, {page:'Shop',path:'/products'}, {page:'About',path:'/about'}, {page:'Contact',path:'/contact'}].map((item, index) => (
+              {[{page:"Home",path:'/'}, {page:'Shop',path:'/products'}, {page:'About',path:'/faq'}, {page:'Contact',path:'/contact'}].map((item, index) => (
                <Link to={`${item.path}`}>
                <li
                   key={index}

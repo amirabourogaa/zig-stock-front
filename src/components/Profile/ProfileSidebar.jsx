@@ -22,10 +22,10 @@ const ProfileSidebar = ({ active, setActive }) => {
 
   const logoutHandler = () => {
     axios
-      .get(`${server}/user/logout`, { withCredentials: true })
+      .get(`${server}/user/ref`, { withCredentials: true })
       .then((res) => {
         toast.success(res.data.message);
-        navigate("/login");
+        navigate("dlogin");
          window.location.reload(true);
       })
       .catch((error) => {

@@ -191,69 +191,118 @@ export const brandingData = [
 export const categoriesData = [
   {
     id: 1,
-    title: "Computers and Laptops",
+    title: "Fashion and Accessories",
     subTitle: "",
     image_Url:
-      "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+      "https://i.pinimg.com/736x/a2/13/4b/a2134b628a854d437cb479b6e6fd2987.jpg",
   },
   {
     id: 2,
-    title: "cosmetics and body care",
+    title: "Electronics and Computers",
     subTitle: "",
     image_Url:
-      "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+      "https://i.pinimg.com/736x/54/ab/c6/54abc658eb3b61c05f674c9838b3bb79.jpg",
   },
   {
     id: 3,
-    title: "Accesories",
+    title: "Home and Decoration",
     subTitle: "",
     image_Url:
-      "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+      "https://i.pinimg.com/736x/f2/7b/7f/f27b7f0cadf9351a38c6f8604be9ce4f.jpg",
   },
   {
     id: 4,
-    title: "Cloths",
+    title: "Beauty and Personal Care",
     subTitle: "",
     image_Url:
-      "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+      "https://i.pinimg.com/736x/fd/cd/76/fdcd760077d1a6cd6af3e00eb9c665b3.jpg",
   },
   {
     id: 5,
-    title: "Shoes",
+    title: "Sports and Outdoor",
     subTitle: "",
     image_Url:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+      "https://i.pinimg.com/736x/64/2f/8b/642f8b36b277093feb152b2c2b174560.jpg",
   },
   {
     id: 6,
-    title: "Gifts",
+    title: "Toys and Kids",
     subTitle: "",
     image_Url:
-      "https://media.istockphoto.com/id/847049634/photo/many-gift-boxes-on-blue-background.jpg?s=612x612&w=0&k=20&c=qRMCVna2IdVY00e5OZMVfknSewNW_pmeyQ-Dnzavy1E=",
+      "https://i.pinimg.com/736x/f5/ef/a8/f5efa8bec070f235e717bfaac8697283.jpg",
   },
   {
     id: 7,
-    title: "Pet Care",
+    title: "Food and Beverages",
     subTitle: "",
-    image_Url: "https://www.mcom.store/wp-content/uploads/2023/09/Sans-titre-5_0018_android-logo-3-1.png",
+    image_Url: "https://i.pinimg.com/736x/b4/33/c8/b433c8eddba82bf2d175e43fb0582cf3.jpg",
   },
   {
     id: 8,
-    title: "Mobile and Tablets",
+    title: "Arts and Culture",
     subTitle: "",
     image_Url:
-      "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+      "https://i.pinimg.com/736x/df/d8/bf/dfd8bfbfc016dd23c35ab05c965f6e9f.jpg",
   },
   {
     id: 9,
-    title: "Music and Gaming",
+    title: "Music and Entertainment",
     subTitle: "",
     image_Url:
-      "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+      "https://i.pinimg.com/736x/a2/42/d8/a242d8d6e798f565fe5516906ee63248.jpg",
   },
   {
     id: 10,
-    title: "Others",
+    title: "Automotive and Motorcycles",
+    subTitle: "",
+    image_Url:
+      "https://i.pinimg.com/736x/8f/ad/84/8fad84f32cc914b5280cb3146ef6fb58.jpg",
+  },
+  {
+    id: 11,
+    title: "Services",
+    subTitle: "",
+    image_Url:
+      "https://i.pinimg.com/736x/64/1b/fb/641bfb32fff7dbc8072db75bdfbfc553.jpg",
+  },
+  {
+    id: 12,
+    title: "DIY and Gardening",
+    subTitle: "",
+    image_Url:
+      "https://i.pinimg.com/736x/56/df/bc/56dfbcbdef4f2c1e1ed52db5d037d009.jpg",
+  },
+  {
+    id: 13,
+    title: "Eco-friendly and Sustainable Products",
+    subTitle: "",
+    image_Url:
+      "https://i.pinimg.com/736x/da/eb/ea/daebea65ab879ea849ebb6d060cfd0ce.jpg",
+  },
+  {
+    id: 14,
+    title: "Pets",
+    subTitle: "",
+    image_Url:
+      "https://i.pinimg.com/736x/99/e2/f8/99e2f879f7823d32ce100075290e674c.jpg",
+  },
+  {
+    id: 15,
+    title: "Real Estate and Properties",
+    subTitle: "",
+    image_Url:
+      "https://i.pinimg.com/736x/bf/c9/07/bfc907a7926538582941b4a480029faa.jpg",
+  },
+  {
+    id: 16,
+    title: "Tourism and Travel",
+    subTitle: "",
+    image_Url:
+      "https://i.pinimg.com/736x/03/36/fe/0336fe305bf8f4ce87cc6f8e28c1bb8e.jpg",
+  },
+  {
+    id: 17,
+    title: "Other",
     subTitle: "",
     image_Url:
       "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
